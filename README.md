@@ -24,7 +24,7 @@
 
 ## Descripción
 
-La empresa Puntopymes CIA, se necesita llevar el control de sus empleados, es decir, la hora
+Se tiene la necesidad de llevar el control de sus empleados, es decir, la hora
 de entrada y de salida, para esto, se solicita desarrollar los servicios back-end con los
 siguientes requisitos:
 1. El sistema dedealabe ser únicamente administrado por el encargado del personal de
