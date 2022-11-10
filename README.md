@@ -38,8 +38,7 @@ siguientes requisitos:
    trabajado un empleado, en la semana y el mes.
 
 ### Datos Técnicos
-La estructura del proyecto deberá estar conformada por los siguientes microservicios, tal
-como se muestra en la siguiente imagen:
+La estructura del proyecto deberá estar conformada por los siguientes microservicios:
 
 ### Microservicio A.
 - Administración del USUARIO ADMIN y empleados.
@@ -62,44 +61,26 @@ base de datos, el Microservicio A deberá responder afirmativa o negativamente
 dependiendo caso y dependiendo de esta respuesta, el Microservicio B registrará o
 no la entrada o salida.
 
+## Architecture
+
+![staffy io app drawio](https://user-images.githubusercontent.com/11874274/201136328-4f4d40c6-7ca5-413f-9626-419f47e2ba94.png)
+
+## Clone
+
+```bash
+$ git clone https://github.com/odmendoza/staffy-io-app.git
+```
+
 ## Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Architecture
-
 ## Run with Docker Compose
 
 ```bash
-docker comporose up --build -V
+$ docker compose up --build -V
 ```
 
 ## Staffy.io app
@@ -112,12 +93,27 @@ Applications were documented with Swagger. You can find them at:
 
 - Employees CRUD
 
+![Screenshot from 2022-11-10 09-49-14](https://user-images.githubusercontent.com/11874274/201136580-35e4d75a-3dd2-4e5e-9dca-b79994da9c23.png)
+
 ### Reports microservice
 
 [http://localhost:3030/api/docs](http://localhost:3030/api/docs)
 
 - Register a entry or exit employee
+
+![Screenshot from 2022-11-10 10-30-50](https://user-images.githubusercontent.com/11874274/201137057-c6a04795-da93-4d60-be0a-c4a202232ca8.png)
+
+Responses
+
+![Screenshot from 2022-11-10 10-32-17](https://user-images.githubusercontent.com/11874274/201137381-d99a30e7-db6d-4ae4-b266-e6c8e8951f48.png)
+
 - Generate reports
+
+![image](https://user-images.githubusercontent.com/11874274/201137689-f82f5dae-f108-4d4f-80dc-1e516781a581.png)
+
+Responses
+
+![image](https://user-images.githubusercontent.com/11874274/201137890-77eed6d7-b99b-49e6-90cb-60af1e5be7da.png)
 
 ## Stay in touch
 
