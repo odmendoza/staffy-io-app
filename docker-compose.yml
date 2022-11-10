@@ -1,0 +1,38 @@
+services:
+  employees:
+    build:
+        context: .
+        dockerfile: ./apps/employees/Dockerfile
+        target: development
+    command: npm run start:dev employees
+    env_file:
+      - ./apps/employees/.env
+    depends_on:
+      - rabbitmq
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '3000:3000'
+
+  reports:
+    build:
+      context: .
+      dockerfile: ./apps/reports/Dockerfile
+      target: development
+    command: npm run start:dev reports
+    env_file:
+      - ./apps/reports/.env
+    depends_on:
+      - employees
+      - rabbitmq
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '3030:3030'
+
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - '5672:5672'
